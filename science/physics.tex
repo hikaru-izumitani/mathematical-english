@@ -1,0 +1,1111 @@
+```latex
+\documentclass[11pt,a4paper]{article}
+
+% --------------------------------------------------
+% Packages
+% --------------------------------------------------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{hyperref}
+
+\geometry{
+    margin=1in
+}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+% --------------------------------------------------
+% Custom commands
+% --------------------------------------------------
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\dd}{\mathrm{d}}
+
+% --------------------------------------------------
+% Document
+% --------------------------------------------------
+\begin{document}
+
+\begin{titlepage}
+    \centering
+
+    \vspace*{2cm}
+
+    {\Huge\bfseries Mathematical English}\\[0.5cm]
+    {\LARGE Physics}\\[1.5cm]
+
+    {\large
+    English Vocabulary, Japanese Meaning,\\
+    Mathematical Formulas, and Physical Meaning
+    }
+
+    \vfill
+
+    {\large
+    Physics Reference\\
+    \today
+    }
+
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% ==================================================
+\section{Classical Mechanics}
+% ==================================================
+
+\subsection{Basic Concepts}
+
+\begin{longtable}{p{0.18\textwidth} p{0.18\textwidth} p{0.25\textwidth} p{0.30\textwidth}}
+\toprule
+\textbf{English} & \textbf{日本語} & \textbf{Formula} & \textbf{Meaning} \\
+\midrule
+\endhead
+
+Position & 位置 &
+$x(t)$ &
+The location of an object as a function of time. \\
+
+Displacement & 変位 &
+$\Delta x = x_f-x_i$ &
+Change in position. \\
+
+Velocity & 速度 &
+$v=\dfrac{\dd x}{\dd t}$ &
+Rate of change of position. \\
+
+Acceleration & 加速度 &
+$a=\dfrac{\dd v}{\dd t}
+=\dfrac{\dd^2x}{\dd t^2}$ &
+Rate of change of velocity. \\
+
+Mass & 質量 &
+$m$ &
+Measure of an object's inertia. \\
+
+Momentum & 運動量 &
+$\bm{p}=m\bm{v}$ &
+Quantity of motion carried by an object. \\
+
+Force & 力 &
+$\bm{F}=m\bm{a}$ &
+Interaction that changes an object's motion. \\
+
+Work & 仕事 &
+$W=\int \bm{F}\cdot\dd\bm{r}$ &
+Energy transferred by a force acting through a displacement. \\
+
+Kinetic Energy & 運動エネルギー &
+$K=\dfrac{1}{2}mv^2$ &
+Energy associated with motion. \\
+
+Potential Energy & ポテンシャルエネルギー &
+$U(\bm{r})$ &
+Energy associated with position or configuration. \\
+
+Mechanical Energy & 力学的エネルギー &
+$E=K+U$ &
+Sum of kinetic and potential energy. \\
+
+Power & 仕事率・動力 &
+$P=\dfrac{\dd W}{\dd t}$ &
+Rate at which work is performed. \\
+
+\bottomrule
+\end{longtable}
+
+% --------------------------------------------------
+\subsection{Kinematics}
+
+For constant acceleration,
+
+\[
+v=v_0+at
+\]
+
+\[
+x=x_0+v_0t+\frac{1}{2}at^2
+\]
+
+\[
+v^2=v_0^2+2a(x-x_0)
+\]
+
+These equations describe motion without requiring an explicit analysis of the forces causing the motion.
+
+% --------------------------------------------------
+\subsection{Newton's Laws}
+
+\textbf{Newton's First Law}
+
+An object remains at rest or moves with constant velocity unless acted upon by a net external force.
+
+\[
+\sum \bm{F}=0
+\]
+
+\textbf{Newton's Second Law}
+
+\[
+\sum \bm{F}=m\bm{a}
+\]
+
+The net force determines the acceleration of an object.
+
+\textbf{Newton's Third Law}
+
+\[
+\bm{F}_{AB}=-\bm{F}_{BA}
+\]
+
+For every force exerted by one object on another, there is an equal and opposite force.
+
+% --------------------------------------------------
+\subsection{Momentum Conservation}
+
+For an isolated system,
+
+\[
+\bm{p}_{\mathrm{initial}}
+=
+\bm{p}_{\mathrm{final}}
+\]
+
+or
+
+\[
+\sum_i m_i\bm{v}_i
+=
+\text{constant}.
+\]
+
+Momentum conservation is particularly important in collision and interaction problems.
+
+% ==================================================
+\section{Rotational Motion}
+% ==================================================
+
+\begin{longtable}{p{0.20\textwidth} p{0.18\textwidth} p{0.25\textwidth} p{0.27\textwidth}}
+\toprule
+\textbf{English} & \textbf{日本語} & \textbf{Formula} & \textbf{Meaning} \\
+\midrule
+\endhead
+
+Angular Position & 角位置 &
+$\theta$ &
+Position measured by an angle. \\
+
+Angular Velocity & 角速度 &
+$\omega=\dfrac{\dd\theta}{\dd t}$ &
+Rate of change of angular position. \\
+
+Angular Acceleration & 角加速度 &
+$\alpha=\dfrac{\dd\omega}{\dd t}$ &
+Rate of change of angular velocity. \\
+
+Torque & トルク・力のモーメント &
+$\bm{\tau}=\bm{r}\times\bm{F}$ &
+Rotational effect of a force. \\
+
+Moment of Inertia & 慣性モーメント &
+$I=\sum_i m_ir_i^2$ &
+Rotational analogue of mass. \\
+
+Angular Momentum & 角運動量 &
+$\bm{L}=\bm{r}\times\bm{p}$ &
+Rotational analogue of linear momentum. \\
+
+Rotational Energy & 回転エネルギー &
+$K_{\mathrm{rot}}=\dfrac12I\omega^2$ &
+Kinetic energy associated with rotation. \\
+
+\bottomrule
+\end{longtable}
+
+The rotational form of Newton's second law is
+
+\[
+\bm{\tau}=I\bm{\alpha}.
+\]
+
+For a rigid body rotating about a fixed axis,
+
+\[
+L=I\omega.
+\]
+
+If the net external torque is zero,
+
+\[
+L=\text{constant}.
+\]
+
+% ==================================================
+\section{Gravitation}
+% ==================================================
+
+\subsection{Newton's Law of Universal Gravitation}
+
+\[
+F=G\frac{m_1m_2}{r^2}
+\]
+
+where
+
+\[
+G\approx6.674\times10^{-11}
+\ \mathrm{N\,m^2/kg^2}.
+\]
+
+\textbf{English:} gravitational force
+
+\textbf{日本語:} 万有引力
+
+\textbf{Meaning:} The gravitational force between two masses decreases with the square of the distance between them.
+
+Near the Earth's surface,
+
+\[
+F_g=mg.
+\]
+
+Thus,
+
+\[
+g\approx9.81\ \mathrm{m/s^2}.
+\]
+
+% ==================================================
+\section{Oscillations}
+% ==================================================
+
+\subsection{Simple Harmonic Motion}
+
+Simple harmonic motion is described by
+
+\[
+x(t)=A\cos(\omega t+\phi).
+\]
+
+The velocity is
+
+\[
+v(t)=-A\omega\sin(\omega t+\phi),
+\]
+
+and the acceleration is
+
+\[
+a(t)=-A\omega^2\cos(\omega t+\phi).
+\]
+
+Therefore,
+
+\[
+a=-\omega^2x.
+\]
+
+This relationship is the defining characteristic of simple harmonic motion.
+
+% --------------------------------------------------
+\subsection{Mass-Spring System}
+
+For a spring,
+
+\[
+F=-kx.
+\]
+
+The angular frequency is
+
+\[
+\omega=\sqrt{\frac{k}{m}}.
+\]
+
+The period is
+
+\[
+T=2\pi\sqrt{\frac{m}{k}}.
+\]
+
+The total mechanical energy is
+
+\[
+E=\frac12kx^2+\frac12mv^2
+=\frac12kA^2.
+\]
+
+% --------------------------------------------------
+\subsection{Simple Pendulum}
+
+For small oscillations,
+
+\[
+T=2\pi\sqrt{\frac{L}{g}}.
+\]
+
+The small-angle approximation is
+
+\[
+\sin\theta\approx\theta.
+\]
+
+% ==================================================
+\section{Waves}
+% ==================================================
+
+\begin{longtable}{p{0.20\textwidth} p{0.18\textwidth} p{0.25\textwidth} p{0.27\textwidth}}
+\toprule
+\textbf{English} & \textbf{日本語} & \textbf{Formula} & \textbf{Meaning} \\
+\midrule
+\endhead
+
+Wavelength & 波長 &
+$\lambda$ &
+Distance between corresponding points of consecutive waves. \\
+
+Frequency & 振動数・周波数 &
+$f$ &
+Number of cycles per unit time. \\
+
+Period & 周期 &
+$T=\dfrac1f$ &
+Time required for one complete cycle. \\
+
+Wave Speed & 波の速さ &
+$v=f\lambda$ &
+Speed at which the wave propagates. \\
+
+Amplitude & 振幅 &
+$A$ &
+Maximum displacement from equilibrium. \\
+
+Wave Number & 波数 &
+$k=\dfrac{2\pi}{\lambda}$ &
+Spatial frequency of a wave. \\
+
+Angular Frequency & 角周波数 &
+$\omega=2\pi f$ &
+Frequency expressed in radians per second. \\
+
+\bottomrule
+\end{longtable}
+
+A one-dimensional traveling wave can be written as
+
+\[
+y(x,t)=A\cos(kx-\omega t+\phi).
+\]
+
+% ==================================================
+\section{Fluid Mechanics}
+% ==================================================
+
+\subsection{Density}
+
+\[
+\rho=\frac{m}{V}.
+\]
+
+\textbf{Density} = 密度
+
+Density represents mass per unit volume.
+
+% --------------------------------------------------
+\subsection{Pressure}
+
+\[
+P=\frac{F}{A}.
+\]
+
+Pressure is force distributed over an area.
+
+For a fluid at rest,
+
+\[
+P=P_0+\rho gh.
+\]
+
+% --------------------------------------------------
+\subsection{Continuity Equation}
+
+For an incompressible steady flow,
+
+\[
+A_1v_1=A_2v_2.
+\]
+
+This expresses conservation of mass.
+
+% --------------------------------------------------
+\subsection{Bernoulli's Equation}
+
+For an ideal incompressible steady flow,
+
+\[
+P+\frac12\rho v^2+\rho gh
+=
+\text{constant}.
+\]
+
+The three terms represent pressure energy, kinetic energy per unit volume, and gravitational potential energy per unit volume.
+
+% ==================================================
+\section{Thermodynamics}
+% ==================================================
+
+\begin{longtable}{p{0.20\textwidth} p{0.18\textwidth} p{0.25\textwidth} p{0.27\textwidth}}
+\toprule
+\textbf{English} & \textbf{日本語} & \textbf{Formula} & \textbf{Meaning} \\
+\midrule
+\endhead
+
+Temperature & 温度 &
+$T$ &
+Measure related to thermal energy and equilibrium. \\
+
+Heat & 熱 &
+$Q$ &
+Energy transferred because of a temperature difference. \\
+
+Internal Energy & 内部エネルギー &
+$U$ &
+Energy contained within a system at the microscopic level. \\
+
+Entropy & エントロピー &
+$S$ &
+State function associated with energy dispersal and the number of accessible microscopic states. \\
+
+Enthalpy & エンタルピー &
+$H=U+PV$ &
+Useful thermodynamic potential, especially for constant-pressure processes. \\
+
+\bottomrule
+\end{longtable}
+
+% --------------------------------------------------
+\subsection{First Law of Thermodynamics}
+
+\[
+\Delta U=Q-W.
+\]
+
+Here, $W$ is work done by the system.
+
+This equation expresses conservation of energy in thermodynamic systems.
+
+% --------------------------------------------------
+\subsection{Ideal Gas Law}
+
+\[
+PV=nRT.
+\]
+
+where
+
+\[
+R=8.314\ \mathrm{J/(mol\,K)}.
+\]
+
+% --------------------------------------------------
+\subsection{Entropy}
+
+For a reversible process,
+
+\[
+\dd S=\frac{\delta Q_{\mathrm{rev}}}{T}.
+\]
+
+For an isolated system,
+
+\[
+\Delta S\geq0.
+\]
+
+This is one mathematical expression of the second law of thermodynamics.
+
+% ==================================================
+\section{Electromagnetism}
+% ==================================================
+
+\subsection{Electric Charge}
+
+\textbf{Electric charge} = 電荷
+
+The elementary charge is
+
+\[
+e\approx1.602\times10^{-19}\ \mathrm{C}.
+\]
+
+% --------------------------------------------------
+\subsection{Coulomb's Law}
+
+\[
+F=k_e\frac{|q_1q_2|}{r^2}.
+\]
+
+In vector form,
+
+\[
+\bm{F}_{12}
+=
+\frac{1}{4\pi\varepsilon_0}
+\frac{q_1q_2}{r^2}\hat{\bm r}.
+\]
+
+% --------------------------------------------------
+\subsection{Electric Field}
+
+\[
+\bm{E}=\frac{\bm{F}}{q}.
+\]
+
+For a point charge,
+
+\[
+\bm{E}
+=
+\frac{1}{4\pi\varepsilon_0}
+\frac{q}{r^2}\hat{\bm r}.
+\]
+
+% --------------------------------------------------
+\subsection{Electric Potential}
+
+\[
+V=\frac{U}{q}.
+\]
+
+For a point charge,
+
+\[
+V=
+\frac{1}{4\pi\varepsilon_0}
+\frac{q}{r}.
+\]
+
+The relationship between electric field and potential is
+
+\[
+\bm{E}=-\nabla V.
+\]
+
+% --------------------------------------------------
+\subsection{Ohm's Law}
+
+\[
+V=IR.
+\]
+
+where
+
+\begin{itemize}
+    \item $V$ = voltage
+    \item $I$ = electric current
+    \item $R$ = resistance
+\end{itemize}
+
+Electrical power is
+
+\[
+P=VI=I^2R=\frac{V^2}{R}.
+\]
+
+% ==================================================
+\section{Maxwell's Equations}
+% ==================================================
+
+Maxwell's equations provide a compact mathematical description of classical electromagnetism.
+
+\subsection{Gauss's Law for Electricity}
+
+\[
+\nabla\cdot\bm{E}
+=
+\frac{\rho}{\varepsilon_0}.
+\]
+
+\subsection{Gauss's Law for Magnetism}
+
+\[
+\nabla\cdot\bm{B}=0.
+\]
+
+This expresses the absence of isolated magnetic monopoles in classical electromagnetism.
+
+\subsection{Faraday's Law}
+
+\[
+\nabla\times\bm{E}
+=
+-\frac{\partial\bm{B}}{\partial t}.
+\]
+
+A changing magnetic field produces an electric field.
+
+\subsection{Amp\`ere--Maxwell Law}
+
+\[
+\nabla\times\bm{B}
+=
+\mu_0\bm{J}
++
+\mu_0\varepsilon_0
+\frac{\partial\bm{E}}{\partial t}.
+\]
+
+A current and a changing electric field produce a magnetic field.
+
+% ==================================================
+\section{Special Relativity}
+% ==================================================
+
+\subsection{Lorentz Factor}
+
+\[
+\gamma=
+\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}.
+\]
+
+where
+
+\[
+c\approx3.00\times10^8\ \mathrm{m/s}.
+\]
+
+% --------------------------------------------------
+\subsection{Time Dilation}
+
+\[
+\Delta t=\gamma\Delta\tau.
+\]
+
+Moving clocks are measured to run slower relative to an observer in another inertial frame.
+
+% --------------------------------------------------
+\subsection{Length Contraction}
+
+\[
+L=\frac{L_0}{\gamma}.
+\]
+
+% --------------------------------------------------
+\subsection{Mass-Energy Equivalence}
+
+\[
+E=mc^2.
+\]
+
+More generally, relativistic energy and momentum satisfy
+
+\[
+E^2=p^2c^2+m^2c^4.
+\]
+
+% ==================================================
+\section{Quantum Mechanics}
+% ==================================================
+
+\subsection{Planck Relation}
+
+\[
+E=hf=\hbar\omega.
+\]
+
+where
+
+\[
+\hbar=\frac{h}{2\pi}.
+\]
+
+% --------------------------------------------------
+\subsection{de Broglie Wavelength}
+
+\[
+\lambda=\frac{h}{p}.
+\]
+
+Particles can exhibit wave-like behavior.
+
+% --------------------------------------------------
+\subsection{Heisenberg Uncertainty Principle}
+
+\[
+\Delta x\,\Delta p
+\geq
+\frac{\hbar}{2}.
+\]
+
+Position and momentum cannot simultaneously have arbitrarily precise values.
+
+% --------------------------------------------------
+\subsection{Schr\"odinger Equation}
+
+The time-dependent Schr\"odinger equation is
+
+\[
+i\hbar
+\frac{\partial\psi}{\partial t}
+=
+\hat{H}\psi.
+\]
+
+For a non-relativistic particle in a potential $V$,
+
+\[
+i\hbar
+\frac{\partial\psi}{\partial t}
+=
+\left[
+-\frac{\hbar^2}{2m}\nabla^2
++
+V
+\right]\psi.
+\]
+
+The time-independent equation is
+
+\[
+\hat{H}\psi=E\psi.
+\]
+
+% --------------------------------------------------
+\subsection{Probability Density}
+
+The probability density is
+
+\[
+P(x)=|\psi(x)|^2.
+\]
+
+The wave function must satisfy the normalization condition
+
+\[
+\int |\psi(x)|^2\,\dd x=1.
+\]
+
+% ==================================================
+\section{Statistical Mechanics}
+% ==================================================
+
+\subsection{Boltzmann Distribution}
+
+\[
+P(E)\propto e^{-E/(k_BT)}.
+\]
+
+where $k_B$ is the Boltzmann constant.
+
+% --------------------------------------------------
+\subsection{Boltzmann Entropy}
+
+\[
+S=k_B\ln\Omega.
+\]
+
+Here, $\Omega$ represents the number of accessible microscopic states.
+
+% --------------------------------------------------
+\subsection{Partition Function}
+
+\[
+Z=\sum_i e^{-\beta E_i},
+\]
+
+where
+
+\[
+\beta=\frac{1}{k_BT}.
+\]
+
+The partition function is a central quantity in statistical mechanics.
+
+% ==================================================
+\section{Lagrangian and Hamiltonian Mechanics}
+% ==================================================
+
+\subsection{Lagrangian}
+
+The Lagrangian is defined as
+
+\[
+L=T-U.
+\]
+
+The equations of motion follow from the Euler--Lagrange equation:
+
+\[
+\frac{\dd}{\dd t}
+\left(
+\frac{\partial L}{\partial\dot q_i}
+\right)
+-
+\frac{\partial L}{\partial q_i}
+=0.
+\]
+
+This formulation can describe classical mechanics without directly resolving every force component.
+
+% --------------------------------------------------
+\subsection{Hamiltonian}
+
+The Hamiltonian is
+
+\[
+H=\sum_i p_i\dot q_i-L.
+\]
+
+Hamilton's equations are
+
+\[
+\dot q_i=\frac{\partial H}{\partial p_i},
+\]
+
+\[
+\dot p_i=-\frac{\partial H}{\partial q_i}.
+\]
+
+In many physical systems, the Hamiltonian corresponds to the total energy.
+
+% ==================================================
+\section{Core Physical Constants}
+% ==================================================
+
+\begin{longtable}{p{0.25\textwidth} p{0.25\textwidth} p{0.35\textwidth}}
+\toprule
+\textbf{Constant} & \textbf{Symbol} & \textbf{Approximate Value} \\
+\midrule
+Speed of light & $c$ & $3.00\times10^8\ \mathrm{m/s}$ \\
+
+Gravitational constant & $G$ & $6.674\times10^{-11}\ \mathrm{N\,m^2/kg^2}$ \\
+
+Planck constant & $h$ & $6.626\times10^{-34}\ \mathrm{J\,s}$ \\
+
+Reduced Planck constant & $\hbar$ & $1.055\times10^{-34}\ \mathrm{J\,s}$ \\
+
+Boltzmann constant & $k_B$ & $1.381\times10^{-23}\ \mathrm{J/K}$ \\
+
+Elementary charge & $e$ & $1.602\times10^{-19}\ \mathrm{C}$ \\
+
+Vacuum permittivity & $\varepsilon_0$ & $8.854\times10^{-12}\ \mathrm{F/m}$ \\
+
+Vacuum permeability & $\mu_0$ & approximately $1.257\times10^{-6}\ \mathrm{H/m}$ \\
+
+\bottomrule
+\end{longtable}
+
+% ==================================================
+\section{Common Physics Symbols}
+% ==================================================
+
+\begin{longtable}{p{0.20\textwidth} p{0.30\textwidth} p{0.35\textwidth}}
+\toprule
+\textbf{Symbol} & \textbf{English} & \textbf{日本語} \\
+\midrule
+$x$ & position & 位置 \\
+$v$ & velocity & 速度 \\
+$a$ & acceleration & 加速度 \\
+$m$ & mass & 質量 \\
+$\bm{p}$ & momentum & 運動量 \\
+$\bm{F}$ & force & 力 \\
+$E$ & energy & エネルギー \\
+$K$ & kinetic energy & 運動エネルギー \\
+$U$ & potential energy & ポテンシャルエネルギー \\
+$P$ & power / pressure & 仕事率 / 圧力 \\
+$\omega$ & angular frequency & 角周波数 \\
+$\lambda$ & wavelength & 波長 \\
+$f$ & frequency & 周波数 \\
+$\theta$ & angle & 角度 \\
+$\rho$ & density / charge density & 密度 / 電荷密度 \\
+$\psi$ & wave function & 波動関数 \\
+$H$ & Hamiltonian & ハミルトニアン \\
+$L$ & Lagrangian / angular momentum & ラグランジアン / 角運動量 \\
+\bottomrule
+\end{longtable}
+
+% ==================================================
+\section{Key Distinctions}
+% ==================================================
+
+\subsection{Mass vs. Weight}
+
+\textbf{Mass} is a measure of inertia:
+
+\[
+m.
+\]
+
+\textbf{Weight} is a gravitational force:
+
+\[
+W=mg.
+\]
+
+Mass is measured in kilograms, while weight is measured in newtons.
+
+% --------------------------------------------------
+\subsection{Energy vs. Power}
+
+Energy measures the amount of energy transferred or stored:
+
+\[
+E.
+\]
+
+Power measures the rate of energy transfer:
+
+\[
+P=\frac{\dd E}{\dd t}.
+\]
+
+% --------------------------------------------------
+\subsection{Velocity vs. Acceleration}
+
+Velocity describes the rate of change of position:
+
+\[
+v=\frac{\dd x}{\dd t}.
+\]
+
+Acceleration describes the rate of change of velocity:
+
+\[
+a=\frac{\dd v}{\dd t}.
+\]
+
+An object can have nonzero velocity while having zero acceleration.
+
+% ==================================================
+\section{Physics Learning Map}
+% ==================================================
+
+A useful conceptual progression is:
+
+\[
+\boxed{
+\text{Mechanics}
+\rightarrow
+\text{Waves}
+\rightarrow
+\text{Thermodynamics}
+\rightarrow
+\text{Electromagnetism}
+\rightarrow
+\text{Relativity}
+\rightarrow
+\text{Quantum Mechanics}
+}
+\]
+
+Mathematics provides the language for describing these physical theories.
+
+A more mathematical progression is:
+
+\[
+\text{Algebra}
+\rightarrow
+\text{Calculus}
+\rightarrow
+\text{Differential Equations}
+\rightarrow
+\text{Linear Algebra}
+\rightarrow
+\text{Vector Calculus}
+\rightarrow
+\text{Advanced Physics}.
+\]
+
+% ==================================================
+\section{Core Relationships}
+% ==================================================
+
+Some of the most important relationships in introductory physics are:
+
+\[
+\boxed{F=ma}
+\]
+
+\[
+\boxed{p=mv}
+\]
+
+\[
+\boxed{E=K+U}
+\]
+
+\[
+\boxed{W=\Delta E}
+\]
+
+\[
+\boxed{E=mc^2}
+\]
+
+\[
+\boxed{E=hf}
+\]
+
+\[
+\boxed{\lambda=\frac{h}{p}}
+\]
+
+\[
+\boxed{
+i\hbar\frac{\partial\psi}{\partial t}
+=
+\hat H\psi
+}
+\]
+
+These equations illustrate how physical concepts are expressed mathematically.
+
+% ==================================================
+\section{Physics and Engineering}
+% ==================================================
+
+Physics provides fundamental models of nature, while engineering applies these models to designed systems.
+
+For example,
+
+\[
+F=ma
+\]
+
+can be used in mechanical system design,
+
+\[
+V=IR
+\]
+
+in electrical systems,
+
+\[
+PV=nRT
+\]
+
+in thermodynamic systems, and
+
+\[
+i\hbar\frac{\partial\psi}{\partial t}
+=
+\hat H\psi
+\]
+
+in quantum systems.
+
+For computational and engineering applications, physical models are often combined with numerical methods, optimization, simulation, and data analysis.
+
+% ==================================================
+\end{document}
+```
